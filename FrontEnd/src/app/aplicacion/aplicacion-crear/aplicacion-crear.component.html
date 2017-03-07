@@ -1,0 +1,38 @@
+<!--VISTA CREAR UNO APLICACION-->
+<div class="container">
+  <form (ngSubmit)="crearAplicacion()">
+    <h1 align="center">AGREGAR NUEVA APLICACION</h1>
+    <div class="row">
+      <div class="col-sm-3">
+        <img [src]="rutImgIzq" height="200" width="200" align="center" alt="">
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label for="nomb">Nombre</label>
+          <input type="text" class="form-control" name="nombre" id="nomb" placeholder="Nombre de la aplicacion" required
+                 [(ngModel)]="nuevaAplicacion.nombre">
+        </div>
+        <div class="form-group">
+          <label for="version">Version</label>
+          <input type="number" class="form-control" name="version" id="version" placeholder="Version" required
+                 [(ngModel)]="nuevaAplicacion.version">
+        </div>
+
+        <div class="form-group">
+          <label for="tamanio">Tamaño(MB)</label>
+          <input type="number" class="form-control" name="tamanio" min="1" id="tamanio" placeholder="Tamaño total" required
+                 [(ngModel)]="nuevaAplicacion.tamanio">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success btn-block">Crear</button>
+        </div>
+      </div>
+      <div class="col-sm-1">
+      </div>
+      <div class="col-sm-3">
+        <img [src]="rutimgDer" height="200" width="200" align="center" alt="">
+      </div>
+    </div>
+  </form>
+</div>

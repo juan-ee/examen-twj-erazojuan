@@ -9,6 +9,10 @@ import { CelularMostrarComponent } from './celular/celular-mostrar/celular-mostr
 import { CelularBorrarComponent } from './celular/celular-borrar/celular-borrar.component';
 import { CelularActualizarComponent } from './celular/celular-actualizar/celular-actualizar.component';
 import {MasterURLService} from "./services/master-url.service";
+import { AplicacionActualizarComponent } from './aplicacion/aplicacion-actualizar/aplicacion-actualizar.component';
+import { AplicacionBorrarComponent } from './aplicacion/aplicacion-borrar/aplicacion-borrar.component';
+import { AplicacionCrearComponent } from './aplicacion/aplicacion-crear/aplicacion-crear.component';
+import { AplicacionMostrarComponent } from './aplicacion/aplicacion-mostrar/aplicacion-mostrar.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +21,10 @@ import {MasterURLService} from "./services/master-url.service";
     CelularMostrarComponent,
     CelularBorrarComponent,
     CelularActualizarComponent,
+    AplicacionActualizarComponent,
+    AplicacionBorrarComponent,
+    AplicacionCrearComponent,
+    AplicacionMostrarComponent,
   ],
   imports: [
     BrowserModule,

@@ -21,7 +21,8 @@
       <td><h4> {{celular.sistemaoperativo}}</h4></td>
       <td><h4> {{celular.version }}</h4></td>
       <td>
-        <a href="#?id={{celular.id}}" class="btn btn-sm btn-warning btn-block">Ver Aplicaciones</a>
+        <a [routerLink]="['/aplicaciones',celular.id]" class="btn btn-sm btn-warning btn-block"
+        >Ver Aplicaciones</a>
       </td>
       <td>
         <a [routerLink]="['/actualizarcelular',celular.nombre,celular.sistemaoperativo,celular.version,celular.id]" class="btn btn-sm btn-primary btn-block">Editar</a>

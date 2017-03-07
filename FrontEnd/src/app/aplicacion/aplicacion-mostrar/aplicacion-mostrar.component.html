@@ -1,0 +1,33 @@
+<!--VISTA LISTAR TODOS CELULAR-->
+<div class="container">
+  <h1 *ngIf="aplicaciones.length==0">El celular no tiene aplicaciones</h1>
+  <a [routerLink]="['/crearaplicacion',_parametros.idcel]" class="btn btn-sm btn-success ">Añadir nueva aplicacion</a>
+  <div *ngIf="aplicaciones.length>0">
+    <h1>Aplicaciones del Celular</h1>
+    <table class="table table-striped ">
+      <thead>
+      <tr>
+        <th><h3>Nombre</h3></th>
+        <th><h3>Version</h3></th>
+        <th><h3>Tamanio(MB)</h3></th>
+        <th></th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody *ngFor="let aplicacion of aplicaciones">
+      <tr>
+        <td><h4> {{aplicacion.nombre }}</h4></td>
+        <td><h4> {{aplicacion.version}}</h4></td>
+        <td><h4> {{aplicacion.tamanio}}</h4></td>
+        <td>
+          <!--<a [routerLink]="['/actualizarcelular',aplicacion.nombre,celular.sistemaoperaativo,celular.version,aplicacion.id]" class="btn btn-sm btn-primary btn-block">Editar</a>-->
+          <a class="btn btn-sm btn-primary btn-block">Editar</a>
+        </td>
+        <td>
+          <app-aplicacion-borrar [idABorrar]="aplicacion.id" (remove)="actualizarAplicaciones(aplicacion)"></app-aplicacion-borrar>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
