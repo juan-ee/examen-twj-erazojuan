@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {MasterURLService} from "../../services/master-url.service";
+import {Http} from "@angular/http";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-celular-borrar',
@@ -7,9 +10,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CelularBorrarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _http: Http, private _masterURL: MasterURLService,private router:Router) {
+
+  }
 
   ngOnInit() {
   }
+
+
+  @Input()
+  private idABorrar: number;
+
+  @Output()
+  private remove = new EventEmitter<any>();
+
+  borrarCelular(){
+    this._http.delete(this._masterURL.url+"celular/"+this.idABorrar)
+      .subscribe(
+        (res)=>{
+          this.remove.emit();
+        },
+        (err)=>{
+          console.log(err);
+        }
+      );
+  }
+
 
 }

@@ -1,3 +1,36 @@
-<p>
-  celular-mostrar works!
-</p>
+<!--VISTA LISTAR TODOS CELULAR-->
+
+<div class="container" *ngIf="celulares.length==0">
+  <h1>No hay registro de celulares</h1>
+</div>
+<div class="container" *ngIf="celulares.length>0">
+  <table class="table table-striped ">
+    <thead>
+    <tr>
+      <th><h3>Nombre</h3></th>
+      <th><h3>Sistema Operativo</h3></th>
+      <th><h3>Version</h3></th>
+      <th><h3>Aplicaciones</h3></th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let celular of celulares">
+    <tr>
+      <td><h4> {{celular.nombre }}</h4></td>
+      <td><h4> {{celular.sistemaoperativo}}</h4></td>
+      <td><h4> {{celular.version }}</h4></td>
+      <td>
+        <a href="#?id={{celular.id}}" class="btn btn-sm btn-warning btn-block">Ver Aplicaciones</a>
+      </td>
+      <td>
+        <a [routerLink]="['/actualizarcelular',celular.nombre,celular.sistemaoperativo,celular.version,celular.id]" class="btn btn-sm btn-primary btn-block">Editar</a>
+      </td>
+      <td>
+        <app-celular-borrar [idABorrar]="celular.id" (remove)="actualizarCelulares(celular)"></app-celular-borrar>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
