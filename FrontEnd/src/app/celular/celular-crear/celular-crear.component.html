@@ -1,0 +1,34 @@
+<!--VISTA CREAR UNO CELULAR-->
+<div class="container">
+  <form (ngSubmit)="crearCelular(nuevoCelularForm)" #nuevoCelularForm="ngForm">
+    <h1 align="center">REGISTRAR NUEVO CELULAR</h1>
+    <div class="row">
+      <div class="col-sm-3">
+        <img [src]="rutImgIzq" height="200" width="200">
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label for="nomb">Nombre</label>
+          <input type="text" class="form-control" [(ngModel)]="nuevoCelular.nombre" name="nombre" id="nomb" placeholder="Modelo del celular" required>
+        </div>
+        <div class="form-group">
+          <label for="so">Sistema Operativo</label>
+          <input type="text" class="form-control" [(ngModel)]="nuevoCelular.sistemaoperativo"  name="sistemaoperativo" id="so" placeholder="Sistema Operativo" required>
+        </div>
+        <div class="form-group">
+          <label for="version">Versión</label>
+          <input type="number" class="form-control" [(ngModel)]="nuevoCelular.version" name="version" id="version" placeholder="Version del SO" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success btn-block" >Crear</button>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-3">
+        <img [src]="rutimgDer" height="200" width="200">
+      </div>
+    </div>
+
+  </form>
+</div>
