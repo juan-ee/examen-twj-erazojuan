@@ -13,6 +13,7 @@ import { AplicacionActualizarComponent } from './aplicacion/aplicacion-actualiza
 import { AplicacionBorrarComponent } from './aplicacion/aplicacion-borrar/aplicacion-borrar.component';
 import { AplicacionCrearComponent } from './aplicacion/aplicacion-crear/aplicacion-crear.component';
 import { AplicacionMostrarComponent } from './aplicacion/aplicacion-mostrar/aplicacion-mostrar.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AplicacionMostrarComponent } from './aplicacion/aplicacion-mostrar/apli
     AplicacionBorrarComponent,
     AplicacionCrearComponent,
     AplicacionMostrarComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

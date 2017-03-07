@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1>Tecnologias Web con Javascript</h1>
+    <p>La tabla padre es Celular y la tabla hijo es Aplicacion. Entonces, un celular podrá tener muchas aplicaciones.</p>
+    <ul>
+      <li>Al listar los celulares, se pueden ver las aplicaciones que poseen en el botón <span class="label label-warning">Ver aplicaciones</span> en donde se podrá añadir nuevas aplicaciones. Así como también editarlas y borrarlas. </li>
+    </ul>
+    <div class="row">
+      <div class="col-sm-6"><p><a class="btn btn-primary btn-lg btn-block btn-success" role="button" [routerLink]="['/crearcelular']">Agregar un Nuevo Celular</a></p></div>
+      <div class="col-sm-6"><p><a class="btn btn-primary btn-lg btn-block btn-success" role="button"
+      [routerLink]="['/celulares']"
+      >Listar los Celulares</a></p></div>
+    </div>
+  </div>
+</div>

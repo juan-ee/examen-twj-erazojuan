@@ -21,7 +21,8 @@
         <td><h4> {{aplicacion.tamanio}}</h4></td>
         <td>
           <!--<a [routerLink]="['/actualizarcelular',aplicacion.nombre,celular.sistemaoperaativo,celular.version,aplicacion.id]" class="btn btn-sm btn-primary btn-block">Editar</a>-->
-          <a class="btn btn-sm btn-primary btn-block">Editar</a>
+          <a [routerLink]="['/actualizarcelular',aplicacion.nombre,aplicacion.version,aplicacion.tamanio,aplicacion.id,aplicacion.cel.id]"
+             class="btn btn-sm btn-primary btn-block">Editar</a>
         </td>
         <td>
           <app-aplicacion-borrar [idABorrar]="aplicacion.id" (remove)="actualizarAplicaciones(aplicacion)"></app-aplicacion-borrar>
